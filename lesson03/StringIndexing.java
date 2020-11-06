@@ -1,7 +1,7 @@
-/*String Methods
-Demonstrates come common string methods*/
+/*String Indexing
+Demonstrates string indexing*/
 
-public class StringMethods{
+public class StringIndexing{
 	public static void main(String[] args){
 		String str = "May the Force be with you.";
 		System.out.println(str);

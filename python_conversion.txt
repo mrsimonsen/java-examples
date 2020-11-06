@@ -1,0 +1,17 @@
+Completed folders: 01, 02
+Remaining to convert
+03:
+	finicky counter
+	guess my number
+	losing battle-bad
+	losing battle-good
+	three year-old
+04:
+	counter
+	hero's inventory
+	hero's invertory 2
+	loopy string
+	no vowels
+	word jumble
+
+Not touched yet: 05,06,07,08
