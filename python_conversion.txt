@@ -1,8 +1,31 @@
-Completed folders: 01, 02
+Completed folders: 01, 02, 03
 Remaining to convert
 04:
-	hero's inventory
-	hero's invertory 2
 	word jumble
+05:
+	geek translator
+	hangman
+	hero's inventory 3
+	high scores
+	high scores 2
+06:
+	birthday wishes
+	global reach
+	instructions
+	receive and return
+	tic tac toe
+07:
+	attribute critter
+	classy critter
+	constructory critter
+	critter caretaker
+	private critter
+	property critter
+	simple critter
+08:
+	handle it
+	pickle it
+	read it
+	trivia challenge
+	write it
 
-Not touched yet: 05,06,07,08
