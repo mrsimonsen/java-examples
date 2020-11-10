@@ -1,7 +1,5 @@
-Completed folders: 01, 02, 03
+Completed folders: 01, 02, 03, 04
 Remaining to convert
-04:
-	word jumble
 05:
 	geek translator
 	hangman
