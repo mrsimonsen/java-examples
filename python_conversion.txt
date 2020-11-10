@@ -7,10 +7,6 @@ Remaining to convert
 	high scores
 	high scores 2
 06:
-	birthday wishes
-	global reach
-	instructions
-	receive and return
 	tic tac toe
 07:
 	attribute critter
