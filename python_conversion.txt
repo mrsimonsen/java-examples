@@ -23,4 +23,3 @@ Remaining to convert
 	trivia challenge
 	write it
 
-ReciveAndReturn2 for Advanced Methods lesson
