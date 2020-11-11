@@ -2,6 +2,7 @@
 Plays the game of tic-tac-toe against a human opponent*/
 
 import java.util.Scanner;
+import java.util.ArrayList;
 
 public class Tic-Tac-Toe{
 	// global constatns
@@ -25,22 +26,50 @@ public class Tic-Tac-Toe{
 		return x;
 	}
 	
-	public static String askYesNo(String question, Scanner scnr){
-		String response;
-		String[] possible = {"y","n"};
+	public static char askYesNo(String question, Scanner scnr){
+		char response = null;
+		char[] possible = {'y','n'};
 		boolean accepted = false;
 		while(!accepted){
 			System.out.println(question);
-			response = 
-
-			for(String r: possible){
-				if(r.equals(possible)){
+			response = scnr.nextLine.charAt(0);
+			for(char r: possible){
+				if(r == possible){
 					accepted = true;
 					break;
 				}
 			}
 		}
 		return response;
+	}
+
+	public static int askNumber(String question, int low, int high, Scanner scnr){
+		int response = null;
+		while(response < low || response > high){
+			System.out.println(question);
+			response = scnr.nextInt();
+		}
+		//flush the buffer
+		scnr.nextLine();
+		return response;
+	}
+
+	public static char[] pieces(Scanner scnr){
+		char human = null;
+		char computer = null;
+		goFirst = askYesNo("Do you reuire the first move? (y/n)",scnr);
+		if(goFirst=='y'){
+			System.out.println("\nThen take the first move. You will need it.");
+			human = X;
+			computer = O;
+		}
+		else{
+			System.out.println("\nYour bravery will be your undoing... I will go first.");
+			computer = X;
+			human = O;
+		}
+		char[] pieces = {human, computer};
+		return pieces;
 	}
 
 	public static String[] newBoard(){
@@ -60,7 +89,7 @@ public class Tic-Tac-Toe{
 		System.out.println();
 	}
 
-	public static String[] legalMoves(String[] board){
+	public static ArrayList<String> legalMoves(String[] board){
 		int[] moves = new int[NUM_SQUARES];
 		for(int i=0; i<NUM_SQUARES; i++){
 			if(board[i].equals(EMPTY)){

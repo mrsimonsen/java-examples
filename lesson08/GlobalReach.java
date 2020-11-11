@@ -1,5 +1,5 @@
 /*Global Reach
-Domstrates global variables*/
+Domstrates global (static) variables*/
 
 public class GlobalReach{
 	//value is a global variable because we're in the global scope
