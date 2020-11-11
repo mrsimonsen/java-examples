@@ -25,7 +25,7 @@ public class ReceiveAndReturn{
 		int number = giveMeFive();
 		display("Here's what I got from giveMeFive(): "+ number);
 		
-		display("Enter a 2 digit grade value:");
+		display("\nEnter a 2 digit grade value and I'll tell you if your failing or passing:");
 		int grade = scnr.nextInt();
 		display("You are "+reportCard(grade));
 	}
