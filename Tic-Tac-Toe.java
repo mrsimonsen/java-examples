@@ -9,7 +9,7 @@ public class Tic-Tac-Toe{
 	static final char O = "O";
 	static final char EMPTY = " ";
 	static final String TIE = "TIE";
-	static final int NUM_SQUARWES = 9;
+	static final int NUM_SQUARES = 9;
 
 	public static void displayInstructions(){
 		String x = "\nWelcome to the greatest intellectual challenge of all time: Tic-Tac-Toe.\n";
@@ -41,6 +41,31 @@ public class Tic-Tac-Toe{
 			}
 		}
 		return response;
+	}
+
+	public static String[] newBoard(){
+		String[] board = new String[NUM_SQUARES];
+		for(int i=0; i<NUM_SQUARES; i++){
+			board[i] = EMPTY;
+		}
+		return board;
+	}
+
+	public static void displayBoard(String[] board){
+		System.out.println("\n\t"+board[0]+"|"+board[1]+"|"+board[2]);
+		System.out.println("\t---------");
+		System.out.println("\n\t"+board[3]+"|"+board[4]+"|"+board[5]);
+		System.out.println("\t---------");
+		System.out.println("\n\t"+board[6]+"|"+board[7]+"|"+board[8]);
+		System.out.println();
+	}
+
+	public static String[] legalMoves(String[] board){
+		int[] moves = new int[NUM_SQUARES];
+		for(int i=0; i<NUM_SQUARES; i++){
+			if(board[i].equals(EMPTY)){
+				moves[i] = i;
+		}
 	}
 }
 
