@@ -1,12 +1,12 @@
 Completed folders: 01, 02, 03, 04
 Remaining to convert
-05:
+05: all for ArrayLists
 	geek translator
 	hangman
 	hero's inventory 3
 	high scores
 	high scores 2
-06:
+06: Best with ArrayLists
 	tic tac toe
 07:
 	attribute critter
@@ -18,8 +18,9 @@ Remaining to convert
 	simple critter
 08:
 	handle it
-	pickle it
+	pickle it - probably going to skip
 	read it
 	trivia challenge
 	write it
 
+ReciveAndReturn2 for Advanced Methods lesson

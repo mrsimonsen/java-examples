@@ -12,22 +12,9 @@ public class ReceiveAndReturn{
 		int five = 5;
 		return five;
 	}
-
-	public static String askYesNo(String question, Scanner scnr){
-		String response = null;
-		String[] possible  = {"y", "n"};
-		boolean accepted = false;
-		while(!accepted){
-			System.out.println(question);
-			response = scnr.nextLine();
-			for(String r:possible){
-				if (response.equals(r)){
-					accepted = true;
-					break;
-				}
-			}
-		}
-		return response;
+	public static String reportCard(int grade){
+		String report = (grade >= 73) ? "passing" : "failing";
+		return report;
 	}
 
 	public static void main(String[] args){
@@ -37,9 +24,10 @@ public class ReceiveAndReturn{
 
 		int number = giveMeFive();
 		display("Here's what I got from giveMeFive(): "+ number);
-
-		String answer = askYesNo("\nPlease enter 'y' or 'n':",scnr);
-		display("Thanks for entering: "+answer);
+		
+		display("Enter a 2 digit grade value:");
+		int grade = scnr.nextInt();
+		display("You are "+reportCard(grade));
 	}
 }
 
