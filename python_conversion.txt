@@ -1,15 +1,10 @@
-Completed folders: 01, 02, 03, 04, 05
+Completed folders: 01, 02, 03, 04, 05, 06
 Remaining to convert
-06: 
-	tic tac toe ?optional?
 07:
-	attribute critter
 	classy critter
-	constructory critter
 	critter caretaker
 	private critter
 	property critter
-	simple critter
 08:
 	handle it
 	pickle it - probably going to skip
