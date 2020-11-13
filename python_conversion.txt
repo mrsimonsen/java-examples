@@ -7,7 +7,6 @@ Remaining to convert
 	trivia challenge
 	write it
 Chapter 9:
-	Alien blaster
 	blackjack
 	cards
 	games
