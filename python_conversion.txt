@@ -1,14 +1,18 @@
-Completed folders: 01, 02, 03, 04, 05, 06
+Completed folders: 01, 02, 03, 04, 05, 06, 07
 Remaining to convert
-07:
-	classy critter
-	critter caretaker
-	private critter
-	property critter
 08:
 	handle it
 	pickle it - probably going to skip
 	read it
 	trivia challenge
 	write it
+Chapter 9:
+	Alien blaster
+	blackjack
+	cards
+	games
+	playing cards
+	playing cards2
+	playing cards3
+	simple game
 
