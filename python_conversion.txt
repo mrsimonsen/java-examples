@@ -9,7 +9,6 @@ Remaining to convert
 Chapter 9:
 	blackjack
 	cards
-	games
 	playing cards
 	playing cards2
 	playing cards3
