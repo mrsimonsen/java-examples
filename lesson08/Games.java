@@ -3,25 +3,23 @@ Demonstrates library creation*/
 
 import java.util.Scanner;
 
-class Player{
+public class Games{
 	public String name;
 	public int score;
-	public Player(String name, int score){
+
+	public Games(String name, int score){
 		this.name = name;
 		this.score = score;
 	}
-	public Player(String name){
-		this.name = name;
+	public Games(){
+		name ="NoName";
 		score = 0;
 	}
-
 	public String toString(){
-		String rep = name+":\t"+score;
+		String rep = this.name+":\t"+this.score;
 		return rep;
 	}
-}
 
-public class Games{
 	public static char askYesNo(String question, Scanner scnr){
 		char response = 'a';
 		char[] possible = {'y', 'n'};
@@ -43,7 +41,7 @@ public class Games{
 			System.out.println(question);
 			response = scnr.nextInt();
 		}
-		//fluch the buffer
+		//flush the buffer
 		scnr.nextLine();
 		return response;
 	}

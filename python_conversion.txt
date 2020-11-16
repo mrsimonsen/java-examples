@@ -8,9 +8,4 @@ Remaining to convert
 	write it
 Chapter 9:
 	blackjack
-	cards
-	playing cards
-	playing cards2
-	playing cards3
-	simple game
 
