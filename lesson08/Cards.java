@@ -2,11 +2,13 @@
 Basic classes for a game with playing cards*/
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Collections;
 
 class Card{
-	final static String[] RANKS ={"A","2","3","4","5","6","7","8","9","10","J","Q","K"};
-	final static String[] SUITS ={"c","d","h","s"};
+	final static ArrayList<String> RANKS = new ArrayList<String>(
+		Arrays.asList("A","2","3","4","5","6","7","8","9","10","J","Q","K"));
+	final static ArrayList<String> SUITS = new ArrayList<String>(Arrays.asList("c","d","h","s"));
 	public String rank;
 	public String suit;
 	public boolean isFaceUp;
