@@ -97,7 +97,7 @@ class BJ_Player extends BJ_Hand{
 		super(name);
 	}
 	
-	public boolean isHitting(){
+	public boolean isHitting(Scanner scnr){
 		char response = Games.askYesNo("\n"+this.name+", do you want a hit? (y/n)", scnr);
 		return response == 'y';
 	}
@@ -107,7 +107,7 @@ class BJ_Player extends BJ_Hand{
 		this.lose();
 	}
 
-	public void lost(){
+	public void lose(){
 		System.out.println(this.name+" loses.");
 	}
 
@@ -144,13 +144,13 @@ class BJ_Game{
 	public BJ_Deck deck;
 
 	public BJ_Game(String[] names){
-		int size = names.lenth;
-		this.players = new ArrayList<BJ_Players>();
+		int size = names.length;
+		this.players = new ArrayList<BJ_Player>();
 		for(int i=0;i<size;i++){
-			this.players.add(new BJ_Player(name[i]));
+			this.players.add(new BJ_Player(names[i]));
 		}
-		this.dealer = BJ_Dealer("Dealer");
-		this.deck = BJ_Deck();
+		this.dealer = new BJ_Dealer("Dealer");
+		this.deck = new BJ_Deck();
 		this.deck.populate();
 		this.deck.shuffle();
 	}
@@ -165,10 +165,10 @@ class BJ_Game{
 		return sp;
 	}
 
-	private void additionalCards(BJ_Player player){
-		while(!player.isBusted() && player.isHitting()){
+	private void additionalCards(BJ_Player player, Scanner scnr){
+		while(!player.isBusted() && player.isHitting(scnr)){
 			BJ_Player[] hit = {player};
-			this.deck.deal(hit);
+			this.deck.deal(hit,1);
 			System.out.println(player);
 			if (player.isBusted()){
 				player.bust();
@@ -176,11 +176,14 @@ class BJ_Game{
 		}
 	}
 
-	public void play(){
+	public void play(Scanner scnr){
 		//deal initial 2 cards to everyone
-		ArrayList<BJ_Hand> list = new ArrayList<BJ_Hand>();
-		list.addAll(this.players);
-		list.add(this.dealer);
+		BJ_Hand[] list = new BJ_Hand[this.players.size()+1];
+		for(int i=0;i<this.players.size();i++){
+			list[i] = this.players.get(i);
+		}
+		list[this.players.size()] = this.dealer;
+
 		this.deck.deal(list,2);
 		this.dealer.flipFirstCard(); //hide dealer's first card
 		for(BJ_Player player:this.players){
@@ -190,7 +193,7 @@ class BJ_Game{
 
 		// deal additional cards to players
 		for(BJ_Player player:this.players){
-			this.additionalCards(player);
+			this.additionalCards(player, scnr);
 		}
 
 		// reveal dealer's first
@@ -203,7 +206,7 @@ class BJ_Game{
 		else{
 			//deal additional cards to dealer
 			System.out.println(this.dealer);
-			this.additionalCards(this.dealer);
+			this.additionalCards(this.dealer, scnr);
 
 			if(this.dealer.isBusted()){
 				//everyone still playing wins
@@ -253,7 +256,7 @@ public class Blackjack{
 
 		char again = 'y';
 		while(again != 'n'){
-			game.play();
+			game.play(scnr);
 			again = Games.askYesNo("\nDo you want to play again?", scnr);
 		}
 	}
