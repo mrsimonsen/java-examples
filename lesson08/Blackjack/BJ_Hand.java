@@ -1,10 +1,11 @@
 import java.util.ArrayList;
+import java.util.Scanner;
 
 public class BJ_Hand{
 	public ArrayList<BJ_Card> cards;
 
 	public BJ_Hand(){
-		this.cards = new ArrayList<BJ_Cards>();
+		this.cards = new ArrayList<BJ_Card>();
 	}
 
 	public String toString(){
@@ -64,4 +65,13 @@ public class BJ_Hand{
 	public boolean isBusted(){
 		return this.total() > 21;
 	}
+
+	public boolean isHitting(Scanner scnr){
+		return false;
+	}
+
+	public void bust(){
+		System.out.println("I exist to be overridden.");
+	}
 }
+

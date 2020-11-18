@@ -18,7 +18,7 @@ public class BJ_Deck extends BJ_Hand{
 	}
 
 	public void deal(BJ_Hand[] hands, int perHand){
-		Card topCard;
+		BJ_Card topCard;
 		for(int i=0;i<perHand;i++){
 			for(BJ_Hand hand:hands){
 				if(! this.cards.isEmpty()){
@@ -32,3 +32,4 @@ public class BJ_Deck extends BJ_Hand{
 		}
 	}
 }
+

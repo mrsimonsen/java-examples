@@ -6,10 +6,12 @@ public class BJ_Player extends BJ_Hand{
 		super();
 		this.name = name;
 	}
+	@Override
 	public boolean isHitting(Scanner scnr){
 		char response = Games.askYesNo("\n"+this.name+", do you want a hit? (y/n)", scnr);
 		return response == 'y';
 	}
+	@Override
 	public void bust(){
 		System.out.println(this.name+" busts.");
 		this.lose();
@@ -27,3 +29,4 @@ public class BJ_Player extends BJ_Hand{
 		System.out.println(this.name+"pushes.");
 	}
 }
+

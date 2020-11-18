@@ -6,6 +6,7 @@ public class BJ_Dealer extends BJ_Hand{
 		super();
 		this.name = name;
 	}
+	@Override
 	public boolean isHitting(Scanner scnr){
 		return this.total() < 17;
 	}
@@ -13,4 +14,9 @@ public class BJ_Dealer extends BJ_Hand{
 	public void flipFirstCard(){
 		this.cards.get(0).flip();
 	}
+	@Override
+	public void bust(){
+		System.out.println(this.name+" busts.");
+	}
 }
+
