@@ -1,8 +1,6 @@
 Completed folders: 01, 02, 03, 04, 05, 06, 07
 Remaining to convert
 08:
-	handle it
-	pickle it - probably going to skip
 	read it
 	trivia challenge
 	write it
