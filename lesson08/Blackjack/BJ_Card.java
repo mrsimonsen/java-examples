@@ -17,8 +17,8 @@ public class BJ_Card{
 	}
 
 	public String toString(){
-		if(this.isFaceUp){
-			return this.rank+this.suit;
+		if(isFaceUp){
+			return rank+suit;
 		}
 		else{
 			return "XX";
@@ -26,20 +26,21 @@ public class BJ_Card{
 	}
 
 	public void flip(){
-		this.isFaceUp = ! this.isFaceUp;
+		isFaceUp = !isFaceUp;
 	}
 
 	public int value(){
 		int v = 0;
-		if(this.isFaceUp){
-			v = BJ_Card.RANKS.indexOf(this.rank)+1;
+		if(isFaceUp){
+			v = BJ_Card.RANKS.indexOf(rank)+1;
 			if(v > 10){
 				v = 10;
 			}
-			else{
-				v = 0;
-			}
+		}
+		else{
+			v = 0;
 		}
 		return v;
 	}
 }
+

@@ -6,6 +6,4 @@ Remaining to convert
 	read it
 	trivia challenge
 	write it
-Chapter 9:
-	blackjack
 
