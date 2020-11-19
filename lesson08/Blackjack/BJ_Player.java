@@ -8,25 +8,25 @@ public class BJ_Player extends BJ_Hand{
 	}
 	@Override
 	public boolean isHitting(Scanner scnr){
-		char response = Games.askYesNo("\n"+this.name+", do you want a hit? (y/n)", scnr);
+		char response = Games.askYesNo("\n"+name+", do you want a hit? (y/n)", scnr);
 		return response == 'y';
 	}
 	@Override
 	public void bust(){
-		System.out.println(this.name+" busts.");
+		System.out.println(name+" busts.");
 		this.lose();
 	}
 
 	public void lose(){
-		System.out.println(this.name+" loses.");
+		System.out.println(name+" loses.");
 	}
 
 	public void win(){
-		System.out.println(this.name+" wins.");
+		System.out.println(name+" wins.");
 	}
 
 	public void push(){
-		System.out.println(this.name+"pushes.");
+		System.out.println(name+"pushes.");
 	}
 }
 

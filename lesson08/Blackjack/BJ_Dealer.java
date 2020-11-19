@@ -8,15 +8,15 @@ public class BJ_Dealer extends BJ_Hand{
 	}
 	@Override
 	public boolean isHitting(Scanner scnr){
-		return this.total() < 17;
+		return total() < 17;
 	}
 
 	public void flipFirstCard(){
-		this.cards.get(0).flip();
+		cards.get(0).flip();
 	}
 	@Override
 	public void bust(){
-		System.out.println(this.name+" busts.");
+		System.out.println(name+" busts.");
 	}
 }
 

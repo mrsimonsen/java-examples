@@ -10,7 +10,7 @@ public class BJ_Hand{
 
 	public String toString(){
 		String rep = "";
-		if(!this.cards.isEmpty()){
+		if(!cards.isEmpty()){
 			for(BJ_Card card:cards){
 				rep+= card.toString()+" ";
 			}
@@ -18,28 +18,28 @@ public class BJ_Hand{
 		else{
 			rep = "<empty>";
 		}
-		if(this.total()>0){
-			rep += "("+this.total()+")";
+		if(total()>0){
+			rep += "("+total()+")";
 		}
 		return rep;
 	}
 
 	public void clear(){
-		this.cards.clear();
+		cards.clear();
 	}
 
 	public void add(BJ_Card card){
-		this.cards.add(card);
+		cards.add(card);
 	}
 
 	public void give(BJ_Card card, BJ_Hand otherHand){
-		this.cards.remove(card);
+		cards.remove(card);
 		otherHand.add(card);
 	}
 
 	public int total(){
 		// if a card in the hand has value of 0, then total() is 0
-		for(BJ_Card card:this.cards){
+		for(BJ_Card card:cards){
 			if(card.value() == 0){
 				return 0;
 			}
@@ -63,10 +63,11 @@ public class BJ_Hand{
 	}
 
 	public boolean isBusted(){
-		return this.total() > 21;
+		return total() > 21;
 	}
 
 	public boolean isHitting(Scanner scnr){
+		System.out.println("I exist to be ovveridden.");
 		return false;
 	}
 
