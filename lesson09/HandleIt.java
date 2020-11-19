@@ -52,6 +52,19 @@ public class HandleIt{
 			System.out.println("That was not a number! Or as Java would say...");
 			System.out.println(e);
 		}
+
+		//try-catch-finally
+		System.out.println("Enter a number:");
+		response = scnr.nextLine();
+		try{
+			num = Double.valueOf(response);
+		}
+		catch(NumberFormatException e){
+			System.out.println("That was not a number!");
+		}
+		finally{
+			System.out.println("You entered "+response);
+		}
 	}
 }
 
