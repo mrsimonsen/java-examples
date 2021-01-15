@@ -1,8 +1,4 @@
-<h2>Reading and Writing to Files</h2>
-<h3>Reading Files</h3>
-<p>The simplest way to work with files is through java.io.File class, which must be imported before you can use it. This class can be used to open files of the given</p>
-<hr />
-<h2>Additional information about Streams</h2>
+<h2>Streams</h2>
 <h3>OutputStream and System.out</h3>
 <p>An <em>OutputStream</em> is a class that supports output-- to a screen, file, or elsewhere. OutputStream provides several overloaded methods for writing a sequence of bytes to a destination. That sequence is normally placed into a buffer, and the system then outputs the buffer at various times.</p>
 <p><em>System.out</em> is a predefined output stream object that is associated with a system's standard output, usually a computer screen. That System class' out variable is a reference derived from OutputStream called <em>PrintStream</em> (e.g., <code>PrintStream out;</code> in the System class). The PrintStream class extends the base functionality of the OutputStream class and provides the print() and println() methods for converting different types of data into a sequence of characters (strings).</p>
@@ -26,3 +22,12 @@
 <p>The StringWriter class provides a character stream that allows a programmer to output characters. The PrintWriter class is a wrapper class that augments character streams, such as StringWriter, with print() and println() methods that allow a programmer to output various data types (e.g., int, double, String, etc.) to the underlying character stream in a manner similar to System.out.</p>
 <p>To create a PrintWriter object, the program must first create a StringWriter, passing the StringWriter object to the constructor for the PrintWriter. Once the PrintWriter object is created, a program can insert characters into that stream using print() and println(). The program can then use the StringWriter's toString() method to copy that buffer to a String.</p>
 <p>Notice that the PrintWriter object provides the print() and println() methods for writing to the stream, and the StringWriter object provides the toString() method for getting the resulting String.<del> The following example illustrates the use of StringWriter and PrintWriter classes.<del></del></del></p>
+<hr />
+<h2>Reading and Writing to Files</h2>
+<h3>File Objects</h3>
+<p>The simplest way to work with files is through java.io.File class, which must be imported before you can use it. This class can be used to create File objects that represent a path to a file (not the actual file). When using the File class, you also need to catch the FileNotFoundException, which can also needs to be imported from java.io.</p>
+<h3>Reading Files</h3>
+<p>To read from a file, create a Scanner based on a File object based on the file. Now you can use regular Scanner methods to read from the file. When you're finished with a file, invoke the close() method of the Scanner. See the ReadIt.java example file.</p>
+<h3>Writing Files</h3>
+<p>To write to a file, you need to import java.io.PrintWriter. Then create a PrintWriter object based on a File object based on the file you want to write to. If the file does not exist, it will be created. If it does exist, it will be overridden (all contents erased). To append to a file (add contents without erasing it), you need to import java.io.FileWriter. Then create a FileWriter object based on the file and send a second paramater of true. Then create a PrintWriter based on the FileWriter. See WriteIt.java example file.</p>
+<hr />
