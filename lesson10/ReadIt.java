@@ -37,7 +37,7 @@ public class ReadIt{
 			reader.close();
 		}
 		catch(FileNotFoundException e){
-			System.out.println("Can't find"+f);
+			System.out.println("Can't find "+f);
 		}
 	}
 }
