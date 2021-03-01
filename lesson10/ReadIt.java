@@ -32,11 +32,8 @@ public class ReadIt{
 
 			System.out.println("\nReading the entire file at once.");
 			reader = new Scanner(file);
-			String text = reader.nextLine();
-			while(reader.hasNextLine()){
-				text += "\n"+reader.nextLine();
-			}
-			System.out.println(text);
+			reader.useDelimiter("\\Z");
+			System.out.println(reader.next());
 			reader.close();
 		}
 		catch(FileNotFoundException e){
