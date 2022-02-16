@@ -14,7 +14,7 @@ public class HerosInventory2{
 		for(String item:inventory){
 			System.out.println(item);
 		}
-		
+
 		System.out.println("\nPress the enter key to contine.");
 		scnr.nextLine();
 
@@ -23,7 +23,7 @@ public class HerosInventory2{
 
 		System.out.println("\nPress the enter key to contine.");
 		scnr.nextLine();
-		
+
 		//testng for membership
 		for(String item:inventory){
 			if(item.equals("healing potion")){
@@ -47,8 +47,8 @@ public class HerosInventory2{
 		for(int i=0;i<inventory.length;i++){
 			inventory2[i] = inventory[i];
 		}
-		for(int i=0;i<chest.length;i++){
-			inventory2[inventory.length+i] = chest[i];
+		for(int i = inventory.length;i<inventory2.length;i++){
+			inventory2[i] = chest[i];
 		}
 		System.out.println("Your inventory is now:");
 		for(String item:inventory){
