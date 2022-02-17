@@ -36,7 +36,7 @@ public class HerosInventory2{
 		int index = scnr.nextInt();
 		System.out.println("At index "+index+" is "+inventory[index]);
 
-		//concatenate two tuples
+		//concatenate two arrays
 		String[] chest = {"gold", "gems"};
 		System.out.println("\nYou find a chest. It contains:");
 		for(String item:chest){
@@ -51,7 +51,7 @@ public class HerosInventory2{
 			inventory2[i] = chest[i];
 		}
 		System.out.println("Your inventory is now:");
-		for(String item:inventory){
+		for(String item:inventory2){
 			System.out.println(item);
 		}
 	}
