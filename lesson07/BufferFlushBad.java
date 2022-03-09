@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class BufferFlushBad(){
+public class BufferFlushBad{
 	public static void main(String[] args){
 		Scanner scnr = new Scanner("1\n2.4\nC\nString\n");
 
